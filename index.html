@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema IFPI - Gestão de Espaços e Celulares</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <div class="logo-area">
+        <div class="ifpi-logo">
+          <div class="i-char">
+            <div class="square red"></div>
+            <div class="square green"></div>
+            <div class="square green"></div>
+            <div class="square green"></div>
+          </div>
+          <div class="f-char">
+            <div class="square green"></div>
+            <div class="square green"></div>
+            <div class="square green"></div>
+            <div class="square green"></div>
+            <div class="square green"></div>
+            <div class="square green"></div>
+            <div class="square green"></div>
+          </div>
+        </div>
+        <h1>IFPI</h1>
+      </div>
+      <h2>Instituto Federal do Piauí</h2>
+      <p>Painel de Gestão e Reservas</p>
+    </header>
+
+    <!--lab e quadra-->
+    <div class="form-section-box">
+      <h3>Formulário 1: Reserva de Laboratórios e Quadra</h3>
+      <form id="formReserva" class="form">
+        <div class="input-group">
+          <label for="solicitante">Nome do Solicitante / Professor</label>
+          <input type="text" id="solicitante" name="solicitante" placeholder="Digite seu nome completo" required>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="espaco">Espaço a Reservar</label>
+            <select id="espaco" name="espaco" required>
+              <option value="">Selecione o espaço...</option>
+              <option value="Laboratório de Informática 1">Laboratório de Informática 1</option>
+              <option value="Laboratório de Informática 2">Laboratório de Informática 2</option>
+              <option value="Laboratório de Informática 3">Laboratório de Informática 3</option>
+              <option value="Lab. Maker">Lab. Maker</option>
+              <option value="Laboratório de Física e Matemática">Laboratório de Física e Matemática</option>
+              <option value="Laboratório de Agrárias">Laboratório de Agrárias</option>
+              <option value="Laboratório de Química">Laboratório de Química</option>
+              <option value="Quadra Coberta">Quadra Coberta</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="diaSemana">Dia da Semana</label>
+            <select id="diaSemana" name="diaSemana" required>
+              <option value="">Selecione o dia...</option>
+              <option value="Segunda-feira">Segunda-feira</option>
+              <option value="Terça-feira">Terça-feira</option>
+              <option value="Quarta-feira">Quarta-feira</option>
+              <option value="Quinta-feira">Quinta-feira</option>
+              <option value="Sexta-feira">Sexta-feira</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="horarioInicio">Início (07:00 - 22:00)</label>
+            <input type="time" id="horarioInicio" name="horarioInicio" min="07:00" max="22:00" required>
+          </div>
+
+          <div class="input-group">
+            <label for="horarioFim">Fim (Mín. 1h de duração)</label>
+            <input type="time" id="horarioFim" name="horarioFim" min="07:00" max="22:00" required>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="finalidade">Finalidade / Disciplina / Turma</label>
+          <input type="text" id="finalidade" name="finalidade" placeholder="Ex: Aula prática de Algoritmos" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Registrar Reserva</button>
+      </form>
+    </div>
+
+    <hr class="divider">
+
+    <!--Formulario do celular-->
+    <div class="form-section-box">
+      <h3>Formulário 2: Liberação de Uso de Celular para Turma</h3>
+      <form id="formCelular" class="form">
+        <div class="input-group">
+          <label for="professorCelular">Nome do Professor</label>
+          <input type="text" id="professorCelular" name="professorCelular" placeholder="Digite seu nome" required>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="turmaCelular">Selecione a Turma</label>
+            <select id="turmaCelular" name="turmaCelular" required>
+              <option value="">Selecione a turma...</option>
+              <option value="Informática 1º Ano">Informática 1º ano</option>
+              <option value="Informática 2º Ano">Informática 2º ano</option>
+              <option value="Informática 3º Ano">Informática 3º ano</option>
+              <option value="Administração 1º Ano">Administração 1º ano</option>
+              <option value="Administração 2º Ano">Administração 2º ano</option>
+              <option value="Administração 3º Ano">Administração 3º ano</option>
+              <option value="Agropecuária 1º Ano">Agropecuária 1º ano</option>
+              <option value="Agropecuária 2º Ano">Agropecuária 2º ano</option>
+              <option value="Agropecuária 3º Ano">Agropecuária 3º ano</option>
+              <option value="Mineração 1º Ano">Mineração 1º ano</option>
+              <option value="Mineração 1º Ano">Mineração 2º ano</option>
+              <option value="Mineração 1º Ano">Mineração 3º ano</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="diaCelular">Dia da Liberação</label>
+            <select id="diaCelular" name="diaCelular" required>
+              <option value="">Selecione o dia...</option>
+              <option value="Segunda-feira">Segunda-feira</option>
+              <option value="Terça-feira">Terça-feira</option>
+              <option value="Quarta-feira">Quarta-feira</option>
+              <option value="Quinta-feira">Quinta-feira</option>
+              <option value="Sexta-feira">Sexta-feira</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="horarioInicioCelular">Início (07:00 - 22:00)</label>
+            <input type="time" id="horarioInicioCelular" name="horarioInicioCelular" min="07:00" max="22:00" required>
+          </div>
+
+          <div class="input-group">
+            <label for="horarioFimCelular">Fim (Mín. 1h de duração)</label>
+            <input type="time" id="horarioFimCelular" name="horarioFimCelular" min="07:00" max="22:00" required>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="motivoCelular">Motivo / Atividade Pedagógica</label>
+          <input type="text" id="motivoCelular" name="motivoCelular" placeholder="Ex: Pesquisa bibliográfica para trabalho" required>
+        </div>
+
+        <button type="submit" class="btn-submit btn-celular-submit">Cadastrar Autorização de Celular</button>
+      </form>
+    </div>
+
+    <div id="mensagemAviso" class="mensagem-aviso hidden"></div>
+
+    <div class="section-grade">
+      <div class="grade-header">
+        <h3>Grade Semanal e Registros</h3>
+        <button type="button" id="btnExportar" class="btn-export">Exportar Dados (JSON)</button>
+      </div>
+
+      <div class="table-responsive">
+        <table class="tabela-grade">
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Espaço / Turma</th>
+              <th>Dia / Horário</th>
+              <th>Responsável</th>
+              <th>Detalhes</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="corpoTabela">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
